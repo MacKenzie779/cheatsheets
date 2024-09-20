@@ -6,4 +6,4 @@ A personal collection of cheatsheets for various topics
 
 - Tools
   
-  - [MEGAcmd](./megacmd.md)
+  - [MEGAcmd](https://github.com/MacKenzie779/cheatsheets/blob/main/megacmd.md)
