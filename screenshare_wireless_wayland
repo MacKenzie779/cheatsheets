@@ -1,6 +1,6 @@
 hyprctl output create headless
 hyprctl monitors
-wayvnc 0.0.0.0
+wayvnc 0.0.0.0 & disown
 wayvncctl output-set "HEADLESS-2"
 
 go to RealVNC
@@ -11,3 +11,47 @@ password: user
 
 after session remove created output monitor
 hyprctl output remove HEADLESS-2
+
+
+
+------------------------------------------------------
+
+  ❯❯ /home/user/.config/wayvnc : ls
+󱁻 config   rsa_key.pem  󰷖 rsa_key.pem.pub
+
+  ❯❯ /home/user/.config/wayvnc : cat config
+use_relative_paths = true
+address = 0.0.0.0
+enable_auth = true
+username = user
+password = user
+rsa_private_key_file = rsa_key.pem
+
+------ Installation ------
+: 1749543099:0;paru -S wayvnc wayvncctl
+: 1749543144:0;hyprctl output create headless\
+
+: 1749543149:0;wayvnc 0.0.0.0\
+
+: 1749543171:0;ifconfig
+: 1749543241:0;vim .config/swaync/config.json
+: 1749543268:0;wayvnc 0.0.0.0\
+
+: 1749543276:0;hyprctl monitors
+: 1749543306:0;wayvncctl output-set "HEADLESS-2"
+: 1749543368:0;sudo ufw allow 5900\
+
+: 1749543379:0;iptables
+: 1749543382:0;iptables -L
+: 1749543386:0;sudo iptables -L
+: 1749543421:0;mkdir -p ~/.config/wayvnc
+: 1749543428:0;ssh-keygen -m pem -f ~/.config/wayvnc/rsa_key.pem -t rsa -N ""
+: 1749543449:0;vim .config/wayvnc/config
+: 1749543482:0;wayvnc 0.0.0.0\
+
+: 1749543685:0;ifconfig
+: 1749543766:0;vim .config/wayvnc/config
+: 1749543975:0;paru -Syu
+: 1749565418:0;hyprctl output remove HEADLESS-2
+: 1749651801:0;hyprctl monitors
+
