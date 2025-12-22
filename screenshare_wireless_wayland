@@ -1,0 +1,13 @@
+hyprctl output create headless
+hyprctl monitors
+wayvnc 0.0.0.0
+wayvncctl output-set "HEADLESS-2"
+
+go to RealVNC
+lookup current ip in ip a and change it in RealVNC connection setings
+username: user
+password: user
+(defined in .config/wayvnc/config)
+
+after session remove created output monitor
+hyprctl output remove HEADLESS-2
